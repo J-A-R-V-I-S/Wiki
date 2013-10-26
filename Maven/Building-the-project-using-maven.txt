@@ -1,0 +1,16 @@
+Author: Vibhor Singhal
+
+Building the project using maven
+
+1. On the command prompt browse to the directory that contains your pom.xml
+
+2. Run command "mvn package" <without quotes, if u r not sensible enough> :p
+	- Here package is a phase. A phase is a step in the build lifecycle, which is an ordered sequence of phases. 
+	  When a phase is given, Maven will execute every phase in the sequence up to and including the one defined.
+
+3. Now execute the following command to run the program on your command prompt.
+	java -cp target/<artifactId>-<version>.<packaging> <groupId>.<the main class>
+	
+	eg:	java -cp target/myFirstSpring-1.0-SNAPSHOT.jar com.spring.myFirstSpring.App
+
+	* Refer to your pom.xml for more details.
