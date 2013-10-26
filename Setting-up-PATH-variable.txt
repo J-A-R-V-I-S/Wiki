@@ -1,0 +1,23 @@
+Author: Vibhor Singhal
+
+Setting up PATH variable
+
+1. Right click on My Computer and select Properties
+
+2. Click Advanced System Settings -> Environment Variables under Advanced Tab
+
+3. If you are creating the PATH variable for the first time.
+	* Click 'New' under 'User Variables'.
+	* Give the name as PATH
+	* Give value as .;<the path which contains your executable files>
+		- '.' refers to current directory.
+
+4. You can add other variables to your PATH variable.
+	For ex: Create a variable JAVA_HOME which contains the path of your JDK folder.
+		Create JAVA_BIN to contain path of the bin folder inside JDK folder. This can be done as
+			JAVA_BIN = %JAVA_HOME%\bin
+		Now add JAVA_BIN in your PATH as follows:
+			PATH = .;%JAVA_BIN%
+
+5. If you want to add more variables to your PATH file then you can do it as follows:
+		PATH = .;%JAVA_BIN%;%M2% and so on.
