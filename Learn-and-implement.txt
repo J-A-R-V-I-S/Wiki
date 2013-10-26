@@ -1,0 +1,13 @@
+Author: Vibhor Singhal
+
+** The following topics/tools should be understood and the concepts should be made clear in the mind before starting off the actual application development**
+
+- Maven
+- pom.xml
+- xsd
+- jUnit test Framework
+- parsing xml response in java
+
+
+Once you learn a topic and are clear on the concepts, mention your name in front of the topic and commit the file.
+This exercise is done in order to create a track record of our knowledge levels.
