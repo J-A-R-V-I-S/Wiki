@@ -1,0 +1,71 @@
+Author: Vibhor Singhal
+
+How to install and test Apache tomcat 6
+
+1. Download Apache tomcat 6.0.37
+2. Extract it to a specific location
+3. Set environment variables CATALINA_HOME to the location where tomcat is extracted
+4. Set environment variable CATALINA as %CATALINA_HOME%\bin (This is not required I believe).
+5. Add the CATALINA variable to your PATH variable
+6. Run command prompt as Administrator.
+7. Navigate to C:/>
+8. Run C:/> service.bat install
+
+	* If u see following output then the tomcat is successfully installed.
+		Installing the service 'Tomcat6' ...
+		Using CATALINA_HOME:    "D:\Jugaad\apache-tomcat-6"
+		Using CATALINA_BASE:    "D:\Jugaad\apache-tomcat-6"
+		Using JAVA_HOME:        "C:\Program Files\Java\jdk1.7.0_40"
+		Using JVM:              "C:\Program Files\Java\jdk1.7.0_40\jre\bin\server\jvm.dll"
+		The service 'Tomcat6' has been installed.
+
+9. Starting up apache tomcat web-server
+	If u have already setup CATALINA variable then type
+		* C:/> startup
+	Else u need to type 
+		* C:/>%CATALINA_HOME%/bin/startup
+
+	The normal startup will be something like this:
+		Using CATALINA_BASE:   "D:\Jugaad\apache-tomcat-6"
+		Using CATALINA_HOME:   "D:\Jugaad\apache-tomcat-6"
+		Using CATALINA_TMPDIR: "D:\Jugaad\apache-tomcat-6\temp"
+		Using JRE_HOME:        "C:\Program Files\Java\jdk1.7.0_40"
+		Using CLASSPATH:       "D:\Jugaad\apache-tomcat-6\bin\bootstrap.jar"
+
+10. Stopping up apache tomcat web-server
+	If you have setup CATALINA variable
+		* C:/> shutdown.bat [Note: .bat is important here as the command "shutdown" refers to the default shutdown utily of windows i.e 
+					shutdown.exe in system32 folder]
+	
+	Else u need to type
+		* C:/>%CATALINA_HOME%/bin/shutdown
+			OR
+		* C:/>%CATALINA_HOME%/bin/shutdown.batour server.
+setup y
+
+	The normal shutdown process will be something like this:
+		Using CATALINA_BASE:   "D:\Jugaad\apache-tomcat-6"
+		Using CATALINA_HOME:   "D:\Jugaad\apache-tomcat-6"
+		Using CATALINA_TMPDIR: "D:\Jugaad\apache-tomcat-6\temp"
+		Using JRE_HOME:        "C:\Program Files\Java\jdk1.7.0_40"
+		Using CLASSPATH:       "D:\Jugaad\apache-tomcat-6\bin\bootstrap.jar"
+
+
+11. To Test the server open up your browser window and type "http://localhost:8080"
+	- This will show you an index page which implies you have successfully setup your server.
+
+12. What can go wrong??
+
+	The most common hiccup is when another web server (or any process for that
+    	matter) has laid claim to port 8080.  This is the default HTTP port that
+    	Tomcat attempts to bind to at startup.  To change this, open the file:
+
+      		 $CATALINA_HOME/conf/server.xml
+
+	and search for '8080'.  Change it to a port that isn't in use, and is
+	greater than 1024, as ports less than or equal to 1024 require superuser
+	access to bind under UNIX.
+	
+	Restart Tomcat and you're in business.  Be sure that you replace the "8080"
+	in the URL you're using to access Tomcat.  For example, if you change the
+	port to 1977, you would request the URL http://localhost:1977/ in your browser.
