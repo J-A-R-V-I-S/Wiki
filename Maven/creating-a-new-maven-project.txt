@@ -1,0 +1,21 @@
+Author: Vibhor Singhal
+
+Installing Maven and creating new poject
+
+1. Download and install maven (Refer to maven installation instructions).
+2. Have Eclipse Kepler with m2e integration.
+3. Open command Prompt and browse to the workspace where you want to create the project.
+4. Create the project in command line
+	-	mvn archetype:generate -DgroupId=com.program -DartifactId=Program -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+	* Use groupId and artifactId as per your convenience.
+
+5. Import the project in eclipse as "Existing Maven Project"
+
+
+If some error is encountered:
+
+5. browse to Project directory where POM is located.
+6. Right-click on your project, select Maven -> Remove Maven Nature.
+7. Open you terminal, go to your project folder and do “mvn eclipse:clean”
+8. Right click on your Project in Eclipse and select “Configure -> Convert into Maven Project”
