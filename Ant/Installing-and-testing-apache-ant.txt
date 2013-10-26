@@ -1,0 +1,15 @@
+Author: Vibhor Singhal
+
+How to install and test Apache Ant 1.7.0
+
+1. Download Apache Ant 1.7.0.
+2. Extract it to a specific location.
+3. Set environment variables ANT_HOME to the location where ANT is extracted.
+4. Set environment variable ANT as %ANT_HOME%\bin.
+5. Add the ANT variable to your PATH variable. (Refer to setting up path variable doc)
+6. Open a fresh command prompt ant type
+	C:/> ANT
+	Buildfile: build.xml does not exist!
+	Build failed
+
+7. If you see the message, then you have successfully installed ANT.
