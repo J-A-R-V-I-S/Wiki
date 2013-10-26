@@ -1,0 +1,18 @@
+* Maven
+
+http://maven.apache.org/download.cgi  
+  - Download the binary .zip file
+  
+
+* Eclipse IDE Kepler
+  -We plan to go with Eclipse Kepler IDE for java EE developers. It contains most of the plugins for Maven and other required tools.
+  
+  http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunam2
+  
+  ** Please note Eclipse and JDK in your system should both be either 32-bit editions or 64-bit editions.
+     Any mismatch wouldn't let your IDe run. **
+     
+* Apache Tomcat Server 6.0.37
+
+    http://tomcat.apache.org/download-60.cgi
+    
